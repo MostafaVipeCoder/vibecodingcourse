@@ -1,2 +1,1 @@
-// ضع رابط الـ Web App هنا (بعد Deploy في Apps Script) — بينتهي بـ /exec
-window.APP_CONFIG={url:'PASTE_WEB_APP_URL_HERE'};
+window.APP_CONFIG={url:'https://script.google.com/macros/s/AKfycbxJChnM3nl0kGUvcLji0lbeFhmRP1ycdVxhA7aDC90RkWUsepaDxaDORGorod7MXO471w/exec'};
