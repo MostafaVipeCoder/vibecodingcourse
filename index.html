@@ -95,6 +95,28 @@
         </div>
       </div>
 
+      <div class="comp" id="comp">
+        <label class="tg"><input type="checkbox" id="withComp"> <span>👥 عايز تسجّل حد معاك؟ <small>(صاحب/زميل ← الاتنين ياخدوا الخصم لو أي واحد فيكم حضر الويبينار)</small></span></label>
+        <div class="comp-body" id="compBody" hidden>
+          <div class="f" data-f="cname">
+            <label for="cname">اسم المرافق بالكامل <span class="o">(ثنائي على الأقل)</span></label>
+            <input id="cname" name="cname" type="text" maxlength="60" autocomplete="off">
+            <div class="err"></div>
+          </div>
+          <div class="f" data-f="cphone">
+            <label for="cphone">موبايل المرافق (واتساب)</label>
+            <input id="cphone" name="cphone" type="tel" dir="ltr" inputmode="tel" placeholder="01XXXXXXXXX" maxlength="18" autocomplete="off">
+            <div class="err"></div>
+          </div>
+          <div class="f" data-f="cemail">
+            <label for="cemail">إيميل المرافق</label>
+            <input id="cemail" name="cemail" type="email" dir="ltr" inputmode="email" placeholder="name@example.com" maxlength="100" autocomplete="off">
+            <div class="err"></div>
+          </div>
+          <p class="hint">المرافق هيسجّل في نفس المستوى اللي اخترته.</p>
+        </div>
+      </div>
+
       <input class="hp" type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="go" id="go" type="submit">سجّلني الآن</button>
     </form>
