@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>التسجيل في تدريب VibeCoder</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <img alt="VibeCoder" src="assets/vibecoder.png">
+    <span class="x">×</span>
+    <img class="campus" alt="Campus" src="assets/campus.svg">
+  </div>
+  <p class="coop">بالتعاون مع كامبس</p>
+  <p class="sub">اتعلّم تبني تطبيقك بالـ AI — من الفكرة للويب</p>
+
+  <div class="card">
+    <form id="frm" novalidate autocomplete="on">
+      <h1>سجّل مكانك في الكورس</h1>
+      <p class="lead">اختار المستوى وسجّل بياناتك وهنتواصل معاك على واتساب.</p>
+      <div class="top-err" id="topErr"></div>
+
+      <div class="f" data-f="level">
+        <label>المستوى والسعر</label>
+        <div class="chips plans" id="level">
+          <input type="radio" name="level" id="l1" value="المستوى الأول">
+          <label for="l1"><span class="pn">المستوى الأول</span><span class="ps">مبتدئين: من فكرة لتطبيق شغّال</span><span class="old" data-old="1"></span><span class="new" data-new="1"></span></label>
+          <input type="radio" name="level" id="l2" value="المستوى الثاني">
+          <label for="l2"><span class="pn">المستوى الثاني</span><span class="ps">محترفين: من نموذج لمنتج</span><span class="old" data-old="2"></span><span class="new" data-new="2"></span></label>
+          <input type="radio" name="level" id="l3" value="المستويين معاً">
+          <label for="l3" class="best"><span><span class="pn">المستويين مع بعض</span><span class="ps">الأوفر · من الصفر للمنتج</span></span><span class="pr"><span class="old" data-old="3"></span><span class="new" data-new="3"></span></span><span class="tag">الأوفر</span></label>
+        </div>
+        <div class="disc" id="disc" aria-live="polite">🎁 خصم 20% لحضور الويبينار — اكتب موبايلك وإيميلك تحت وهنتحقق من خصمك</div>
+        <div class="dts"><span>📍 أول دفعة: <b>المنيا · كلاود</b></span><span>🗓️ البداية: <b>الأحد 29 نوفمبر</b> · 5 أيام · 3 ساعات/يوم</span></div>
+        <div class="err"></div>
+      </div>
+
+      <div class="f" data-f="name">
+        <label for="name">الاسم بالكامل <span class="o">(ثنائي على الأقل)</span></label>
+        <input id="name" name="name" type="text" autocomplete="name" maxlength="60">
+        <div class="err"></div>
+      </div>
+
+      <div class="f" data-f="phone">
+        <label for="phone">رقم الموبايل (واتساب)</label>
+        <input id="phone" name="phone" type="tel" dir="ltr" inputmode="tel" autocomplete="tel" placeholder="01XXXXXXXXX" maxlength="18">
+        <div class="err"></div>
+      </div>
+
+      <div class="f" data-f="email">
+        <label for="email">الإيميل</label>
+        <input id="email" name="email" type="email" dir="ltr" inputmode="email" autocomplete="email" placeholder="name@example.com" maxlength="100">
+        <div class="err"></div>
+      </div>
+
+      <div class="f" data-f="job">
+        <label>أنت حالياً</label>
+        <div class="chips" id="job">
+          <input type="radio" name="job" id="j1" value="طالب"><label for="j1">🎓 طالب</label>
+          <input type="radio" name="job" id="j2" value="موظف"><label for="j2">💼 موظف</label>
+          <input type="radio" name="job" id="j3" value="فريلانسر"><label for="j3">🧑‍💻 فريلانسر</label>
+          <input type="radio" name="job" id="j4" value="صاحب بيزنس"><label for="j4">🏪 صاحب بيزنس</label>
+          <input type="radio" name="job" id="j5" value="غير ذلك"><label for="j5">… غير ذلك</label>
+        </div>
+        <div class="err"></div>
+      </div>
+
+      <div class="f" data-f="exp">
+        <label>خبرتك مع الـ AI والبرمجة</label>
+        <div class="chips" id="exp">
+          <input type="radio" name="exp" id="e1" value="أول مرة"><label for="e1">🌱 أول مرة</label>
+          <input type="radio" name="exp" id="e2" value="بستخدم AI للكتابة"><label for="e2">✍️ بستخدم AI للكتابة</label>
+          <input type="radio" name="exp" id="e3" value="عملت حاجة قبل كده"><label for="e3">🛠️ عملت حاجة قبل كده</label>
+        </div>
+        <div class="err"></div>
+      </div>
+
+      <div class="f" data-f="idea">
+        <label for="idea">فكرة التطبيق اللي نفسك تبنيه <span class="o">(اختياري)</span></label>
+        <textarea id="idea" name="idea" maxlength="500" placeholder="مثلاً: موقع لحجز المواعيد لعيادتي…"></textarea>
+        <div class="err"></div>
+      </div>
+
+      <div class="f">
+        <label>عرفت عننا منين؟ <span class="o">(اختياري)</span></label>
+        <div class="chips" id="source">
+          <input type="radio" name="source" id="s1" value="الويبينار"><label for="s1">الويبينار</label>
+          <input type="radio" name="source" id="s2" value="فيسبوك/انستجرام"><label for="s2">فيسبوك/انستجرام</label>
+          <input type="radio" name="source" id="s3" value="صديق"><label for="s3">صديق</label>
+          <input type="radio" name="source" id="s4" value="كامبس"><label for="s4">كامبس</label>
+        </div>
+      </div>
+
+      <input class="hp" type="text" name="website" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="go" id="go" type="submit">سجّلني الآن</button>
+    </form>
+
+    <div class="done" id="done" role="status">
+      <svg class="ck" viewBox="0 0 90 90"><circle cx="45" cy="45" r="40"/><path d="M27 46l12 12 25-27"/></svg>
+      <h2>تم التسجيل بنجاح 🎉</h2>
+      <p id="doneMsg">هنتواصل معاك على واتساب قريب.</p>
+      <div class="sum" id="sum"></div>
+      <a class="wa" id="wa" href="#" target="_blank" rel="noopener" style="display:none">انضم لجروب واتساب</a>
+    </div>
+  </div>
+  <div class="foot">بياناتك محفوظة ومش بتتشارك مع أي طرف.</div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js" defer></script>
+</body>
+</html>
